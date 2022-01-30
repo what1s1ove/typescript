@@ -118,7 +118,7 @@
 
   <section class="slide slide--sn" id="typescript">
     <h2 class="typescript__title">TypeScript <span class="next">– is an</span></h2>
-    <p class="typescript__desc"><span class="next"><b>add-on (or top-on technology)</b> to JavaScript.</span> <span class="next">Which adds <b>static typing</b> <span class="next">before the <b>transpilation</b> stage.</span></span></p>
+    <p class="typescript__desc"><span class="next"><b>add-on (or top-on technology)</b> for JavaScript.</span> <span class="next">Which adds <b>static type checking</b> <span class="next">while the <b>transpilation</b> stage.</span></span></p>
   </section>
 
   <section class="slide slide--sn" id="transpilation">
@@ -218,6 +218,30 @@
 
       #sugar .sugar__item-code {
         font-size: 11px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="types">
+    <h2 class="types__title">🧱 Static Type Checking</h2>
+
+    <style>
+      #types .types__title {
+        margin: 200px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="scopes">
+    <h2 class="scopes__title">🌗 Type Scope vs Code Scope</h2>
+    <pre class="scopes__code next">
+      <code>const employee: <mark class="important next">[number, string]</mark> = <mark class="next">[1, 'Steve']</mark>;</code>
+    </pre>
+    <a class="bottom-link" href="https://www.typescriptlang.org/play" target="_blank" rel="noreferrer">Playground</a>
+
+    <style>
+      #scopes .scopes__code {
+        margin: 150px 0 0;
       }
     </style>
   </section>
