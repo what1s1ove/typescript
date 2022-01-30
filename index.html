@@ -29,11 +29,12 @@
 <body class="shower list">
 
   <header class="caption">
-    <h1>TypeScript</h1>
+    <h1>Why TypeScript</h1>
   </header>
 
   <section class="slide" id="cover">
-    <img class="cover__img" src="pictures/ts-logo.svg" width="300" alt="TypeScript">
+    <h2 class="cover__title">Why TypeScript</h2>
+    <img class="cover__img" src="pictures/ts-logo.svg" width="250" alt="TypeScript">
     <a class="bottom-link" href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>
     <p class="copyright right">
       <a href="https://whatislove.dev/" target="_blank" rel="noreferrer">© Vladyslav Zubko</a>
@@ -46,8 +47,8 @@
         align-items: center;
       }
 
-      #cover .cover__img {
-        margin: 80px 0 0;
+      #cover .cover__title {
+        margin: 50px 0 50px;
       }
     </style>
   </section>
@@ -64,9 +65,223 @@
   </section>
 
   <section class="slide slide--sn" id="today">
-    <h2>Today in program ...</h2>
-    <ul class="next">
+    <h2 class="today__title">Today in program ...</h2>
+    <ul class="today__list next">
+      <li class="today__item">ECMAScript History</li>
+      <li class="today__item next">ECMAScript 4</li>
+      <li class="today__item next">Transpilation</li>
+      <li class="today__item next">Static Type Checking</li>
+      <li class="today__item next">Demo</li>
+      <li class="today__item next">Pros & Cons</li>
     </ul>
+    <p class="today__ps next">PS. We will not consider syntactic constructions in detail.</p>
+  </section>
+
+  <section class="slide slide--sn" id="ecmascript">
+    <h2 class="ecmascript__title">ECMAScript History</h2>
+    <ul class="ecmascript__list next">
+      <li class="ecmascript__item">1st edition – June 1997</li>
+      <li class="ecmascript__item next">2nd edition – June 1998</li>
+      <li class="ecmascript__item next">3rd edition – December 1999</li>
+      <li class="ecmascript__item next"><b>4th edition <span class="next">~ October 2007 (unreleased ⚠️)</span></b></li>
+      <li class="ecmascript__item next">5th edition – December 2009</li>
+      <li class="ecmascript__item next">5.1 edition – June 2011</li>
+      <li class="ecmascript__item next">
+        6th edition – June 2015
+        <ul class="ecmascript__list">
+          <li class="ecmascript__item"><code>const/let</code>, <code>class</code>, <code>new Promise</code>, etc.</li>
+        </ul>
+      </li>
+      <li class="ecmascript__item next">7th edition – June 2016</li>
+      <li class="ecmascript__item next">...</li>
+      <li class="ecmascript__item next">12th edition – June 2021</li>
+    </ul>
+    <a class="bottom-link" href="https://en.wikipedia.org/wiki/ECMAScript" target="_blank" rel="noreferrer">ECMAScript History</a>
+
+    <style>
+      #ecmascript .ecmascript__item {
+        font-size: 15px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="unreleased">
+    <h2 class="unreleased__title">ECMAScript 4</h2>
+    <a class="bottom-link" href="https://evertpot.com/ecmascript-4-the-missing-version/" target="_blank" rel="noreferrer">ES4</a>
+
+    <style>
+      #unreleased {
+        display: grid;
+        place-items: center;
+        background-color: #f7df1c;
+      }
+
+      #unreleased .unreleased__title {
+        line-height: 0;
+        font-size: 120px;
+        color: #000000;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="typescript">
+    <h2 class="typescript__title">TypeScript <span class="next">– is an</span></h2>
+    <p class="typescript__desc"><span class="next"><b>add-on (or top-on technology)</b> for JavaScript.</span> <span class="next">Which adds <b>static type checking</b> <span class="next">while the <b>transpilation</b> stage.</span></span></p>
+  </section>
+
+  <section class="slide slide--sn" id="transpilation">
+    <h2 class="transpilation__title">⚙️ Transpilation</h2>
+
+    <style>
+      #transpilation .transpilation__title {
+        margin: 200px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="sugar">
+    <h2 class="sugar__title">🍭 Sugar</h2>
+    <ul class="sugar__list next">
+      <li class="sugar__item">
+        <h3 class="sugar__item-title sugar__item-title--sass">SASS</h3>
+        <pre class="sugar__item-code">
+          <code>.title { </code>
+          <code>  font-size: 14px; </code>
+          <code> </code>
+          <code> <mark>&amp;--red</mark> { </code>
+          <code>    color: red;</code>
+          <code>  } </code>
+          <code>} </code>
+        </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--ts">TS</h3>
+        <pre class="sugar__item-code">
+            <code>const sealed = (constructor: Function) =&gt; {</code>
+            <code>  Object.seal(constructor);</code>
+            <code>}</code>
+            <code> </code>
+            <code><mark>@sealed</mark></code>
+            <code>class BugReport {} </code>
+          </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--css">CSS</h3>
+        <pre class="sugar__item-code">
+          <code>.title { </code>
+          <code>  font-size: 14px; </code>
+          <code>} </code>
+          <code> </code>
+          <code>.title--red { </code>
+          <code>   color: red; </code>
+          <code>} </code>
+        </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--js">JS</h3>
+        <pre class="sugar__item-code">
+          <code>var __decorate = (this &amp;&amp; this.__decorate) || function(...</code>
+          <code>  var c = arguments.length, r = c &lt; 3 ? target : desc...</code>
+          <code><span class="comment">  // 🩸☠️🩸</span></code>
+          <code>};</code>
+          <code>BugReport = __decorate([ </code>
+          <code>    sealed </code>
+          <code>], BugReport);</code>
+        </pre>
+      </li>
+    </ul>
+
+    <style>
+      #sugar .sugar__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+      }
+
+      #sugar .sugar__item::before {
+        display: none;
+      }
+
+      #sugar .sugar__item-title {
+        margin: 0 0 10px;
+        font-size: 15px;
+        line-height: 1;
+      }
+
+      #sugar .sugar__item-title--sass {
+        color: #d75893;
+      }
+
+      #sugar .sugar__item-title--ts {
+        color: #3178c6;
+      }
+
+      #sugar .sugar__item-title--css {
+        color: #2196f3;
+      }
+
+      #sugar .sugar__item-title--js {
+        color: #ffe100;
+      }
+
+      #sugar .sugar__item-code {
+        font-size: 11px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="types">
+    <h2 class="types__title">🧱 Static Type Checking</h2>
+
+    <style>
+      #types .types__title {
+        margin: 200px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="scopes">
+    <h2 class="scopes__title">🌗 Type Scope vs Code Scope</h2>
+    <pre class="scopes__code next">
+      <code>const employee: <mark class="important next">[number, string]</mark> = <mark class="next">[1, 'Steve']</mark>;</code>
+    </pre>
+    <a class="bottom-link" href="https://www.typescriptlang.org/play" target="_blank" rel="noreferrer">Playground</a>
+
+    <style>
+      #scopes .scopes__code {
+        margin: 150px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="demo">
+    <h2 class="demo__title">▶️ Demo</h2>
+    <a class="bottom-link" href="https://github.com/what1s1ove/typescript-demo/pull/1" target="_blank" rel="noreferrer">Demo</a>
+
+    <style>
+      #demo .demo__title {
+        margin: 200px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="conclusions">
+    <h2 class="conclusions__title">🌓 Pros & Cons</h2>
+    <ul class="conclusions__list">
+      <li class="conclusions__item">➕ All JavaScript is valid TypeScript (but not vice versa)</li>
+      <li class="conclusions__item">➕ <i>Usually</i> easy to integrate into an existing project</li>
+      <li class="conclusions__item">➕ Helps maintain contracts between applications/modules</li>
+      <li class="conclusions__item">➕ New features appear earlier than in browsers (starts from stage 3)</li>
+      <li class="conclusions__item">➕/➖ <i>Slows</i> development in the beginning, but <b>speeds</b> it <b>up</b> in the long term</li>
+      <li class="conclusions__item">➖ Does not have a documentation at all (Handbook <code>!==</code> Documentation)</li>
+      <li class="conclusions__item">➖ <i>Can</i> break compatibility with pure JS (cause of big problems). Ex. <code>import/exports</code>, <code>decor@tors</code>, <code>enum</code></li>
+    </ul>
+
+    <style>
+      #conclusions .conclusions__item {
+        font-size: 17px;
+      }
+    </style>
   </section>
 
   <section class="slide slide--sn" id="thanks">
