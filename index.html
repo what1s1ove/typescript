@@ -70,7 +70,7 @@
   </section>
 
   <section class="slide slide--sn" id="ecmascript">
-    <h2 class="ecmascript__title">ECMAScript</h2>
+    <h2 class="ecmascript__title">ECMAScript History</h2>
     <ul class="ecmascript__list next">
       <li class="ecmascript__item">1st edition – June 1997</li>
       <li class="ecmascript__item next">2nd edition – June 1998</li>
@@ -112,6 +112,112 @@
         line-height: 0;
         font-size: 120px;
         color: #000000;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="typescript">
+    <h2 class="typescript__title">TypeScript <span class="next">– is an</span></h2>
+    <p class="typescript__desc"><span class="next"><b>add-on (or top-on technology)</b> to JavaScript.</span> <span class="next">Which adds <b>static typing</b> <span class="next">before the <b>transpilation</b> stage.</span></span></p>
+  </section>
+
+  <section class="slide slide--sn" id="transpilation">
+    <h2 class="transpilation__title">⚙️ Transpilation</h2>
+
+    <style>
+      #transpilation .transpilation__title {
+        margin: 200px 0 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--sn" id="sugar">
+    <h2 class="sugar__title">🍭 Sugar</h2>
+    <ul class="sugar__list next">
+      <li class="sugar__item">
+        <h3 class="sugar__item-title sugar__item-title--sass">SASS</h3>
+        <pre class="sugar__item-code">
+          <code>.title { </code>
+          <code>  font-size: 14px; </code>
+          <code> </code>
+          <code> <mark>&amp;--red</mark> { </code>
+          <code>    color: red;</code>
+          <code>  } </code>
+          <code>} </code>
+        </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--ts">TS</h3>
+        <pre class="sugar__item-code">
+            <code>const sealed = (constructor: Function) =&gt; {</code>
+            <code>  Object.seal(constructor);</code>
+            <code>}</code>
+            <code> </code>
+            <code><mark>@sealed</mark></code>
+            <code>class BugReport {} </code>
+          </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--css">CSS</h3>
+        <pre class="sugar__item-code">
+          <code>.title { </code>
+          <code>  font-size: 14px; </code>
+          <code>} </code>
+          <code> </code>
+          <code>.title--red { </code>
+          <code>   color: red; </code>
+          <code>} </code>
+        </pre>
+      </li>
+      <li class="sugar__item next">
+        <h3 class="sugar__item-title sugar__item-title--js">JS</h3>
+        <pre class="sugar__item-code">
+          <code>var __decorate = (this &amp;&amp; this.__decorate) || function(...</code>
+          <code>  var c = arguments.length, r = c &lt; 3 ? target : desc...</code>
+          <code><span class="comment">  // 🩸☠️🩸</span></code>
+          <code>};</code>
+          <code>BugReport = __decorate([ </code>
+          <code>    sealed </code>
+          <code>], BugReport);</code>
+        </pre>
+      </li>
+    </ul>
+
+    <style>
+      #sugar .sugar__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+      }
+
+      #sugar .sugar__item::before {
+        display: none;
+      }
+
+      #sugar .sugar__item-title {
+        margin: 0 0 10px;
+        font-size: 15px;
+        line-height: 1;
+      }
+
+      #sugar .sugar__item-title--sass {
+        color: #d75893;
+      }
+
+      #sugar .sugar__item-title--ts {
+        color: #3178c6;
+      }
+
+      #sugar .sugar__item-title--css {
+        color: #2196f3;
+      }
+
+      #sugar .sugar__item-title--js {
+        color: #ffe100;
+      }
+
+      #sugar .sugar__item-code {
+        font-size: 11px;
       }
     </style>
   </section>
